@@ -1,0 +1,7 @@
+* text=auto
+*.m text eol=lf
+*.py text eol=lf
+# Preserve reference-data bytes so recorded checksums remain valid.
+*.csv -text
+*.json -text
+*.slx binary

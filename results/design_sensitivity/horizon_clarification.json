@@ -1,0 +1,19 @@
+{
+  "scope": "Post-run numerical clarification of the single horizon-limited row; original 30s primary results unchanged.",
+  "DesignID": "PI_w18_pm55",
+  "CaseID": 29,
+  "originalElapsedEndpoint_s": 29,
+  "originalFrequencyAtEndpoint_Hz": 0.0013370597649591442,
+  "originalRecovery_s": null,
+  "extendedElapsedEndpoint_s": 60,
+  "extendedSampleInterval_s": 0.001,
+  "extendedSampledRecovery_s": 31.333,
+  "refinedRecovery_s": 31.332322590180805,
+  "fineGridRootDifference_s": 0,
+  "modalLsimMaxDifference_Hz": 6.9011636683047328E-15,
+  "tailBoundAtExtendedEndpoint_Hz": 4.6723921331372224E-5,
+  "originalAllTargetsPass": false,
+  "allTargetsClassificationChanged": false,
+  "eligibleMatchedRankingsChanged": false,
+  "reason": "Recovery remains far above8s; this unpaired PI design has no positive-gain PIDF counterpart under the fixed closure."
+}

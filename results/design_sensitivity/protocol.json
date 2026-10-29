@@ -1,0 +1,52 @@
+{
+  "title": "Predetermined balanced controller-design sensitivity protocol",
+  "savedBeforeExecution": true,
+  "savedAt": "2026-10-28T12:18:41.109052+00:00",
+  "status": "Protocol saved before any design-sensitivity simulations",
+  "scope": "Exploratory follow-up to the retained benchmark; no original controller replacement, global optimisation or physical validation.",
+  "grid": {
+    "wc_rad_s": [
+      1.8,
+      2.4,
+      3.0
+    ],
+    "targetPM_deg": [
+      55,
+      65,
+      75
+    ],
+    "PIDF_N": [
+      5,
+      10,
+      20
+    ]
+  },
+  "candidateCounts": {
+    "PI": 9,
+    "PIDF": 27,
+    "plannedMatchedPairs": 27
+  },
+  "tuning": "Cstar=exp(j*(-180+PM)*pi/180)/P(j*wc). PI: Kp=Re(Cstar), Ki=-wc*Im(Cstar). PIDF: Tf=1/(N*wc), Ki=wc*Kp; solve real and imaginary equations for Kp,Kd.",
+  "eligibility": "Retain every candidate in design_register.csv. Exclude nonfinite or nonpositive required gains. Independently check nominal augmented-state stability and all unity-gain crossings; target match tolerances 1e-7 relative frequency and 1e-6 degree. A valid matched comparison requires both designs eligible and their actual governing PM equal the common target. No alternative gains replace exclusions.",
+  "plantCases": "All43 existing cases: nominal,32 corners and10 one-parameter endpoints. Fixed controller gains across plants. All positive-gain candidates are evaluated; unstable cases are explicit failures.",
+  "timeDomain": {
+    "loadStep_pu": 0.01,
+    "stepTime_s": 1,
+    "endTime_s": 30,
+    "sampleInterval_s": 0.001,
+    "method": "Augmented-state eigenmode response, same original sample times; recovery measured after load step through endpoint. IAE over29s. No output time series are retained for every candidate."
+  },
+  "criteria": {
+    "recoveryBand_Hz": 0.001,
+    "recoveryLimit_s": 8,
+    "maximumDeviation_Hz": 0.025,
+    "maximumSecondaryCommand_pu": 0.02,
+    "minimumPM_deg": 45,
+    "minimumGM_dB": 6,
+    "strictStability": true
+  },
+  "frequencyMetrics": "Complete polynomial crossing inventory; compare nominal inventories with MATLAB allmargin, record numerical disagreement. Ms=max|1/(1+L)| via getPeakGain. Noise is |C/(1+PC)| at100rad/s for secondary measurement injection only.",
+  "comparisons": "All feasible matched pairs; report counts, medians and ranges with equal design/case weights. Report infeasible and unpaired settings separately. No inferential p-values or probability interpretation.",
+  "qualityChecks": "Cross-check the two retained controllers against saved nominal and all43 metrics; spot-check modal states against lsim; verify loop point and polynomial crossing residuals. Inspect any margin classification changes caused by exact crossing refinement. Check modal tail bounds at original endpoint.",
+  "interpretationLimits": "The grid is deliberately finite and exploratory. Its outcome is conditional on gains, tuning closure, targets, model and load. Ms and one-frequency noise gain do not constitute hardware noise validation."
+}

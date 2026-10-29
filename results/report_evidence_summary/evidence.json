@@ -1,0 +1,965 @@
+{
+  "scope": "Read-only saved CSV aggregation and algebra check; no simulations or source changes. All precision reflects saved numerical output, not measurement accuracy.",
+  "inputs": [
+    {
+      "path": "results/design_sensitivity/design_register.csv",
+      "sha256": "7d88dc0cd2b9ffaf674fa2d3cb3a498d2fe946322db508415e07c04a21a4359c"
+    },
+    {
+      "path": "results/design_sensitivity/design_summary.csv",
+      "sha256": "fd3ee58ba038996b1f14a379791f48d4bf99ec57393e0969a23bfce095d42494"
+    },
+    {
+      "path": "results/design_sensitivity/nominal_metrics.csv",
+      "sha256": "827f03f87c53c814fe76de356e14c71782d7596dcf1ab5eec4eacf85fc3a5a59"
+    },
+    {
+      "path": "results/design_sensitivity/all_plant_cases.csv",
+      "sha256": "e60c379f26e0f2da3a857add8f1b74d3c1a74bd2c162a16a133e0878afbc4eed"
+    },
+    {
+      "path": "results/design_sensitivity/matched_comparisons.csv",
+      "sha256": "8084f6faf233e6a3c9312d5272260066a45a1e205d6660afaab18e4f5e4354b9"
+    },
+    {
+      "path": "results/design_decision_review/threshold_scenario_summary.csv",
+      "sha256": "81cc597705289d0c283114c2e72e70318f8c8ff82e3b7b5c828f76d99c61c8eb"
+    }
+  ],
+  "validation": {
+    "rows": 1118,
+    "designs_registered": 36,
+    "designs_evaluated": 26,
+    "cases_per_design": 43,
+    "baseline_flags_and_counts_match": true,
+    "threshold_summary_independently_matches": true,
+    "eligible_pair_nominal_joins_match": true,
+    "final_gains_independent_algebra": {
+      "Kp": 0.3089442569412562,
+      "Ki": 0.7414662166590149,
+      "Kd": 0.06763855696816175,
+      "Tf": 0.041666666666666664
+    },
+    "final_point_match_residual": 7.850462293418876e-16
+  },
+  "gain_units": {
+    "Kp": "pu/Hz",
+    "Ki": "pu/(Hz s)",
+    "Kd": "pu s/Hz",
+    "Tf": "s",
+    "g100": "pu/Hz"
+  },
+  "comparison": [
+    {
+      "DesignID": "PI_w24_pm65",
+      "gains": {
+        "Kp": 0.294341095484895,
+        "Ki": 0.485773839103765,
+        "Kd": 0.0,
+        "Tf": 0.0
+      },
+      "nominal": {
+        "Recovery_s": 4.655,
+        "MaxAbs_Hz": 0.0217019646651364,
+        "IAE_Hz_s": 0.0243078517415641,
+        "PeakCommand_pu": 0.0113595998316385,
+        "PM_deg": 64.9999999999999,
+        "GM_dB": 11.275474132079,
+        "Ms": 1.8995407061259,
+        "CommandNoiseGain100": 0.294384209206884
+      },
+      "worst_43": {
+        "Recovery_s": {
+          "value": 13.788,
+          "case": 28
+        },
+        "MaxAbs_Hz": {
+          "value": 0.0306477029381382,
+          "case": 29
+        },
+        "PeakCommand_pu": {
+          "value": 0.0150602521699448,
+          "case": 29
+        },
+        "PM_deg": {
+          "value": 20.2989570622437,
+          "case": 28
+        },
+        "GM_dB": {
+          "value": 3.97810923065116,
+          "case": 28
+        },
+        "Ms": {
+          "value": 4.22123922264134,
+          "case": 28
+        },
+        "CommandNoiseGain100": {
+          "value": 0.294390176533501,
+          "case": 5
+        },
+        "IAE_Hz_s": {
+          "value": 0.069038336847878,
+          "case": 28
+        }
+      },
+      "pass_count": 34,
+      "stable_count": 43,
+      "failures": [
+        {
+          "CaseID": 5.0,
+          "Tg_factor": 0.8,
+          "Tt_factor": 0.8,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 1.2,
+          "R_factor": 1.2,
+          "Recovery_s": 3.675,
+          "MaxAbs_Hz": 0.0251898464597473,
+          "PeakCommand_pu": 0.0116382375645618,
+          "PM_deg": 55.0945118508753,
+          "GM_dB": 11.1396513489164
+        },
+        {
+          "CaseID": 12.0,
+          "Tg_factor": 0.8,
+          "Tt_factor": 1.2,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 1.2,
+          "R_factor": 0.8,
+          "Recovery_s": 6.643,
+          "MaxAbs_Hz": 0.0259747040583573,
+          "PeakCommand_pu": 0.0119793005947147,
+          "PM_deg": 41.6490108894114,
+          "GM_dB": 7.98712413308034
+        },
+        {
+          "CaseID": 13.0,
+          "Tg_factor": 0.8,
+          "Tt_factor": 1.2,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 1.2,
+          "R_factor": 1.2,
+          "Recovery_s": 6.613,
+          "MaxAbs_Hz": 0.0287944660318145,
+          "PeakCommand_pu": 0.0139762729862358,
+          "PM_deg": 33.5027292880259,
+          "GM_dB": 8.31399942484315
+        },
+        {
+          "CaseID": 20.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 0.8,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 1.2,
+          "R_factor": 0.8,
+          "Recovery_s": 5.908,
+          "MaxAbs_Hz": 0.024391953896446,
+          "PeakCommand_pu": 0.0108726149412154,
+          "PM_deg": 43.6268112223412,
+          "GM_dB": 6.71677365730205
+        },
+        {
+          "CaseID": 21.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 0.8,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 1.2,
+          "R_factor": 1.2,
+          "Recovery_s": 5.193,
+          "MaxAbs_Hz": 0.0269902007830299,
+          "PeakCommand_pu": 0.0126309004312629,
+          "PM_deg": 39.2615589448232,
+          "GM_dB": 7.5781506301973
+        },
+        {
+          "CaseID": 27.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 1.2,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 0.8,
+          "R_factor": 1.2,
+          "Recovery_s": 6.419,
+          "MaxAbs_Hz": 0.0245731550040862,
+          "PeakCommand_pu": 0.0135789604952496,
+          "PM_deg": 38.3415166314223,
+          "GM_dB": 8.38355885625455
+        },
+        {
+          "CaseID": 28.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 1.2,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 1.2,
+          "R_factor": 0.8,
+          "Recovery_s": 13.788,
+          "MaxAbs_Hz": 0.0277790617631853,
+          "PeakCommand_pu": 0.0132143115462368,
+          "PM_deg": 20.2989570622437,
+          "GM_dB": 3.97810923065116
+        },
+        {
+          "CaseID": 29.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 1.2,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 1.2,
+          "R_factor": 1.2,
+          "Recovery_s": 11.254,
+          "MaxAbs_Hz": 0.0306477029381382,
+          "PeakCommand_pu": 0.0150602521699448,
+          "PM_deg": 20.5328320609486,
+          "GM_dB": 4.70167564240823
+        },
+        {
+          "CaseID": 33.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 1.2,
+          "Tp_factor": 1.2,
+          "Ksys_factor": 1.2,
+          "R_factor": 1.2,
+          "Recovery_s": 6.457,
+          "MaxAbs_Hz": 0.0247384223175882,
+          "PeakCommand_pu": 0.0136783719713307,
+          "PM_deg": 37.1622464558224,
+          "GM_dB": 8.22170212944209
+        }
+      ]
+    },
+    {
+      "DesignID": "PIDF_w24_pm65_N10",
+      "gains": {
+        "Kp": 0.285983338285653,
+        "Ki": 0.686360011885568,
+        "Kd": 0.0351722282134759,
+        "Tf": 0.0416666666666667
+      },
+      "nominal": {
+        "Recovery_s": 2.991,
+        "MaxAbs_Hz": 0.0196999347129587,
+        "IAE_Hz_s": 0.0198788686081051,
+        "PeakCommand_pu": 0.0113357377161082,
+        "PM_deg": 64.9999999999999,
+        "GM_dB": 26.5685505833131,
+        "Ms": 1.57396836761601,
+        "CommandNoiseGain100": 1.09985884855196
+      },
+      "worst_43": {
+        "Recovery_s": {
+          "value": 6.706,
+          "case": 28
+        },
+        "MaxAbs_Hz": {
+          "value": 0.0274570602703838,
+          "case": 29
+        },
+        "PeakCommand_pu": {
+          "value": 0.0144806989970744,
+          "case": 29
+        },
+        "PM_deg": {
+          "value": 32.180689237066,
+          "case": 29
+        },
+        "GM_dB": {
+          "value": 20.0888717420785,
+          "case": 28
+        },
+        "Ms": {
+          "value": 2.36789495864775,
+          "case": 29
+        },
+        "CommandNoiseGain100": {
+          "value": 1.10001272267628,
+          "case": 5
+        },
+        "IAE_Hz_s": {
+          "value": 0.0387353954479706,
+          "case": 29
+        }
+      },
+      "pass_count": 36,
+      "stable_count": 43,
+      "failures": [
+        {
+          "CaseID": 13.0,
+          "Tg_factor": 0.8,
+          "Tt_factor": 1.2,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 1.2,
+          "R_factor": 1.2,
+          "Recovery_s": 4.231,
+          "MaxAbs_Hz": 0.025663357315307,
+          "PeakCommand_pu": 0.0133579901028951,
+          "PM_deg": 44.7780262286769,
+          "GM_dB": 25.395525437582
+        },
+        {
+          "CaseID": 15.0,
+          "Tg_factor": 0.8,
+          "Tt_factor": 1.2,
+          "Tp_factor": 1.2,
+          "Ksys_factor": 0.8,
+          "R_factor": 1.2,
+          "Recovery_s": 4.36,
+          "MaxAbs_Hz": 0.0175444835351761,
+          "PeakCommand_pu": 0.013113074264846,
+          "PM_deg": 43.6798454764458,
+          "GM_dB": 32.7442296409879
+        },
+        {
+          "CaseID": 27.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 1.2,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 0.8,
+          "R_factor": 1.2,
+          "Recovery_s": 5.482,
+          "MaxAbs_Hz": 0.0223294136121804,
+          "PeakCommand_pu": 0.0137078783627659,
+          "PM_deg": 39.3581375764529,
+          "GM_dB": 25.1177068873461
+        },
+        {
+          "CaseID": 28.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 1.2,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 1.2,
+          "R_factor": 0.8,
+          "Recovery_s": 6.706,
+          "MaxAbs_Hz": 0.0252304934372573,
+          "PeakCommand_pu": 0.0126312348100784,
+          "PM_deg": 36.735399076796,
+          "GM_dB": 20.0888717420785
+        },
+        {
+          "CaseID": 29.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 1.2,
+          "Tp_factor": 0.8,
+          "Ksys_factor": 1.2,
+          "R_factor": 1.2,
+          "Recovery_s": 6.058,
+          "MaxAbs_Hz": 0.0274570602703838,
+          "PeakCommand_pu": 0.0144806989970744,
+          "PM_deg": 32.180689237066,
+          "GM_dB": 21.0584727813705
+        },
+        {
+          "CaseID": 31.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 1.2,
+          "Tp_factor": 1.2,
+          "Ksys_factor": 0.8,
+          "R_factor": 1.2,
+          "Recovery_s": 5.684,
+          "MaxAbs_Hz": 0.0183936301401687,
+          "PeakCommand_pu": 0.0137150010146216,
+          "PM_deg": 38.4819766042939,
+          "GM_dB": 28.8928252460329
+        },
+        {
+          "CaseID": 33.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 1.2,
+          "Tp_factor": 1.2,
+          "Ksys_factor": 1.2,
+          "R_factor": 1.2,
+          "Recovery_s": 5.507,
+          "MaxAbs_Hz": 0.0224677445097709,
+          "PeakCommand_pu": 0.0138001610484215,
+          "PM_deg": 38.3471152268462,
+          "GM_dB": 25.0425992261778
+        }
+      ]
+    },
+    {
+      "DesignID": "PIDF_w24_pm75_N10",
+      "gains": {
+        "Kp": 0.308944256941256,
+        "Ki": 0.741466216659015,
+        "Kd": 0.0676385569681617,
+        "Tf": 0.0416666666666667
+      },
+      "nominal": {
+        "Recovery_s": 2.788,
+        "MaxAbs_Hz": 0.0180196261925145,
+        "IAE_Hz_s": 0.0159505739405674,
+        "PeakCommand_pu": 0.0105142711000206,
+        "PM_deg": 75.0,
+        "GM_dB": 25.8881934504575,
+        "Ms": 1.31418881170571,
+        "CommandNoiseGain100": 1.87915981770194
+      },
+      "worst_43": {
+        "Recovery_s": {
+          "value": 4.376,
+          "case": 31
+        },
+        "MaxAbs_Hz": {
+          "value": 0.0248590321799635,
+          "case": 29
+        },
+        "PeakCommand_pu": {
+          "value": 0.0137308570035661,
+          "case": 29
+        },
+        "PM_deg": {
+          "value": 44.1582676777606,
+          "case": 31
+        },
+        "GM_dB": {
+          "value": 20.3776367194577,
+          "case": 20
+        },
+        "Ms": {
+          "value": 1.68110031756841,
+          "case": 31
+        },
+        "CommandNoiseGain100": {
+          "value": 1.87963510980486,
+          "case": 5
+        },
+        "IAE_Hz_s": {
+          "value": 0.026797431275485,
+          "case": 31
+        }
+      },
+      "pass_count": 42,
+      "stable_count": 43,
+      "failures": [
+        {
+          "CaseID": 31.0,
+          "Tg_factor": 1.2,
+          "Tt_factor": 1.2,
+          "Tp_factor": 1.2,
+          "Ksys_factor": 0.8,
+          "R_factor": 1.2,
+          "Recovery_s": 4.376,
+          "MaxAbs_Hz": 0.0170620728830329,
+          "PeakCommand_pu": 0.0129675880103497,
+          "PM_deg": 44.1582676777606,
+          "GM_dB": 29.6620571599809
+        }
+      ]
+    }
+  ],
+  "matched_pair_summary": {
+    "recovery_advantage_s": {
+      "minimum": 0.006999999999999673,
+      "maximum": 16.616,
+      "minimum_design": "PIDF_w24_pm55_N10",
+      "maximum_design": "PIDF_w30_pm65_N5"
+    },
+    "IAE_reduction_percent": {
+      "minimum": 0.8842561027446849,
+      "maximum": 85.35843014736248,
+      "minimum_design": "PIDF_w24_pm55_N5",
+      "maximum_design": "PIDF_w30_pm65_N5"
+    },
+    "noise_ratio_PIDF_over_PI": {
+      "minimum": 1.0687818581273707,
+      "maximum": 15.795442839609873,
+      "minimum_design": "PIDF_w24_pm55_N5",
+      "maximum_design": "PIDF_w30_pm65_N20"
+    }
+  },
+  "matched_compact_5rows": [
+    {
+      "wc_rad_s": 2.4,
+      "PM_deg": 55.0,
+      "N_values": [
+        5.0,
+        10.0,
+        20.0
+      ],
+      "recovery_advantage_s": [
+        0.006999999999999673,
+        0.008000000000000007
+      ],
+      "IAE_reduction_percent": [
+        0.8842561027446849,
+        0.9958807329346397
+      ],
+      "noise_ratio_PIDF_over_PI": [
+        1.0687818581273707,
+        1.2636516159300084
+      ]
+    },
+    {
+      "wc_rad_s": 2.4,
+      "PM_deg": 65.0,
+      "N_values": [
+        5.0,
+        10.0,
+        20.0
+      ],
+      "recovery_advantage_s": [
+        1.6530000000000005,
+        1.6830000000000003
+      ],
+      "IAE_reduction_percent": [
+        17.335525053115852,
+        18.549097939282454
+      ],
+      "noise_ratio_PIDF_over_PI": [
+        2.2860926490528333,
+        6.2713395073215015
+      ]
+    },
+    {
+      "wc_rad_s": 2.4,
+      "PM_deg": 75.0,
+      "N_values": [
+        5.0,
+        10.0,
+        20.0
+      ],
+      "recovery_advantage_s": [
+        2.0100000000000002,
+        2.0720000000000005
+      ],
+      "IAE_reduction_percent": [
+        42.51761332655516,
+        43.48792205270722
+      ],
+      "noise_ratio_PIDF_over_PI": [
+        3.2432269931690514,
+        10.245644177954734
+      ]
+    },
+    {
+      "wc_rad_s": 3.0,
+      "PM_deg": 55.0,
+      "N_values": [
+        5.0,
+        10.0,
+        20.0
+      ],
+      "recovery_advantage_s": [
+        3.239,
+        3.336
+      ],
+      "IAE_reduction_percent": [
+        50.71654640807866,
+        50.86934436370563
+      ],
+      "noise_ratio_PIDF_over_PI": [
+        4.011248786852832,
+        12.845248365350528
+      ]
+    },
+    {
+      "wc_rad_s": 3.0,
+      "PM_deg": 65.0,
+      "N_values": [
+        5.0,
+        10.0,
+        20.0
+      ],
+      "recovery_advantage_s": [
+        16.569000000000003,
+        16.616
+      ],
+      "IAE_reduction_percent": [
+        85.34476114474894,
+        85.35843014736248
+      ],
+      "noise_ratio_PIDF_over_PI": [
+        4.754256372502368,
+        15.795442839609873
+      ]
+    }
+  ],
+  "all15_pairs": [
+    {
+      "PI_DesignID": "PI_w24_pm55",
+      "PIDF_DesignID": "PIDF_w24_pm55_N5",
+      "wc_rad_s": 2.4,
+      "PM_deg": 55.0,
+      "N": 5.0,
+      "recovery_advantage_s": 0.008000000000000007,
+      "IAE_reduction_percent": 0.8842561027446849,
+      "noise_ratio_PIDF_over_PI": 1.0687818581273707
+    },
+    {
+      "PI_DesignID": "PI_w24_pm55",
+      "PIDF_DesignID": "PIDF_w24_pm55_N10",
+      "wc_rad_s": 2.4,
+      "PM_deg": 55.0,
+      "N": 10.0,
+      "recovery_advantage_s": 0.006999999999999673,
+      "IAE_reduction_percent": 0.9623914013075163,
+      "noise_ratio_PIDF_over_PI": 1.144068681979707
+    },
+    {
+      "PI_DesignID": "PI_w24_pm55",
+      "PIDF_DesignID": "PIDF_w24_pm55_N20",
+      "wc_rad_s": 2.4,
+      "PM_deg": 55.0,
+      "N": 20.0,
+      "recovery_advantage_s": 0.006999999999999673,
+      "IAE_reduction_percent": 0.9958807329346397,
+      "noise_ratio_PIDF_over_PI": 1.2636516159300084
+    },
+    {
+      "PI_DesignID": "PI_w24_pm65",
+      "PIDF_DesignID": "PIDF_w24_pm65_N5",
+      "wc_rad_s": 2.4,
+      "PM_deg": 65.0,
+      "N": 5.0,
+      "recovery_advantage_s": 1.6830000000000003,
+      "IAE_reduction_percent": 17.335525053115852,
+      "noise_ratio_PIDF_over_PI": 2.2860926490528333
+    },
+    {
+      "PI_DesignID": "PI_w24_pm65",
+      "PIDF_DesignID": "PIDF_w24_pm65_N10",
+      "wc_rad_s": 2.4,
+      "PM_deg": 65.0,
+      "N": 10.0,
+      "recovery_advantage_s": 1.6640000000000001,
+      "IAE_reduction_percent": 18.22038072531874,
+      "noise_ratio_PIDF_over_PI": 3.7361339846153694
+    },
+    {
+      "PI_DesignID": "PI_w24_pm65",
+      "PIDF_DesignID": "PIDF_w24_pm65_N20",
+      "wc_rad_s": 2.4,
+      "PM_deg": 65.0,
+      "N": 20.0,
+      "recovery_advantage_s": 1.6530000000000005,
+      "IAE_reduction_percent": 18.549097939282454,
+      "noise_ratio_PIDF_over_PI": 6.2713395073215015
+    },
+    {
+      "PI_DesignID": "PI_w24_pm75",
+      "PIDF_DesignID": "PIDF_w24_pm75_N5",
+      "wc_rad_s": 2.4,
+      "PM_deg": 75.0,
+      "N": 5.0,
+      "recovery_advantage_s": 2.0720000000000005,
+      "IAE_reduction_percent": 42.51761332655516,
+      "noise_ratio_PIDF_over_PI": 3.2432269931690514
+    },
+    {
+      "PI_DesignID": "PI_w24_pm75",
+      "PIDF_DesignID": "PIDF_w24_pm75_N10",
+      "wc_rad_s": 2.4,
+      "PM_deg": 75.0,
+      "N": 10.0,
+      "recovery_advantage_s": 2.0350000000000006,
+      "IAE_reduction_percent": 43.259713112977835,
+      "noise_ratio_PIDF_over_PI": 5.781317050328017
+    },
+    {
+      "PI_DesignID": "PI_w24_pm75",
+      "PIDF_DesignID": "PIDF_w24_pm75_N20",
+      "wc_rad_s": 2.4,
+      "PM_deg": 75.0,
+      "N": 20.0,
+      "recovery_advantage_s": 2.0100000000000002,
+      "IAE_reduction_percent": 43.48792205270722,
+      "noise_ratio_PIDF_over_PI": 10.245644177954734
+    },
+    {
+      "PI_DesignID": "PI_w30_pm55",
+      "PIDF_DesignID": "PIDF_w30_pm55_N5",
+      "wc_rad_s": 3.0,
+      "PM_deg": 55.0,
+      "N": 5.0,
+      "recovery_advantage_s": 3.336,
+      "IAE_reduction_percent": 50.71654640807866,
+      "noise_ratio_PIDF_over_PI": 4.011248786852832
+    },
+    {
+      "PI_DesignID": "PI_w30_pm55",
+      "PIDF_DesignID": "PIDF_w30_pm55_N10",
+      "wc_rad_s": 3.0,
+      "PM_deg": 55.0,
+      "N": 10.0,
+      "recovery_advantage_s": 3.268,
+      "IAE_reduction_percent": 50.841205975771885,
+      "noise_ratio_PIDF_over_PI": 7.345555978040503
+    },
+    {
+      "PI_DesignID": "PI_w30_pm55",
+      "PIDF_DesignID": "PIDF_w30_pm55_N20",
+      "wc_rad_s": 3.0,
+      "PM_deg": 55.0,
+      "N": 20.0,
+      "recovery_advantage_s": 3.239,
+      "IAE_reduction_percent": 50.86934436370563,
+      "noise_ratio_PIDF_over_PI": 12.845248365350528
+    },
+    {
+      "PI_DesignID": "PI_w30_pm65",
+      "PIDF_DesignID": "PIDF_w30_pm65_N5",
+      "wc_rad_s": 3.0,
+      "PM_deg": 65.0,
+      "N": 5.0,
+      "recovery_advantage_s": 16.616,
+      "IAE_reduction_percent": 85.35843014736248,
+      "noise_ratio_PIDF_over_PI": 4.754256372502368
+    },
+    {
+      "PI_DesignID": "PI_w30_pm65",
+      "PIDF_DesignID": "PIDF_w30_pm65_N10",
+      "wc_rad_s": 3.0,
+      "PM_deg": 65.0,
+      "N": 10.0,
+      "recovery_advantage_s": 16.580000000000002,
+      "IAE_reduction_percent": 85.34476114474894,
+      "noise_ratio_PIDF_over_PI": 8.916401275686098
+    },
+    {
+      "PI_DesignID": "PI_w30_pm65",
+      "PIDF_DesignID": "PIDF_w30_pm65_N20",
+      "wc_rad_s": 3.0,
+      "PM_deg": 65.0,
+      "N": 20.0,
+      "recovery_advantage_s": 16.569000000000003,
+      "IAE_reduction_percent": 85.34549065756556,
+      "noise_ratio_PIDF_over_PI": 15.795442839609873
+    }
+  ],
+  "threshold_scenarios": [
+    {
+      "scenario": "Baseline",
+      "thresholds": {
+        "Recovery_s": 8,
+        "MaxAbs_Hz": 0.025,
+        "PeakCommand_pu": 0.02,
+        "PM_deg": 45,
+        "GM_dB": 6
+      },
+      "selected": "PIDF_w24_pm75_N10",
+      "selected_pass_count": 42,
+      "candidate_A_pass_count": 42,
+      "original_PI_pass_count": 34,
+      "original_PIDF_pass_count": 36,
+      "maximum_count_ties": [
+        "PIDF_w24_pm75_N10",
+        "PIDF_w30_pm75_N5",
+        "PIDF_w24_pm75_N20",
+        "PIDF_w30_pm75_N10"
+      ],
+      "denominator": 43
+    },
+    {
+      "scenario": "Recovery_s=6",
+      "thresholds": {
+        "Recovery_s": 6.0,
+        "MaxAbs_Hz": 0.025,
+        "PeakCommand_pu": 0.02,
+        "PM_deg": 45,
+        "GM_dB": 6
+      },
+      "selected": "PIDF_w24_pm75_N10",
+      "selected_pass_count": 42,
+      "candidate_A_pass_count": 42,
+      "original_PI_pass_count": 32,
+      "original_PIDF_pass_count": 36,
+      "maximum_count_ties": [
+        "PIDF_w24_pm75_N10",
+        "PIDF_w30_pm75_N5",
+        "PIDF_w24_pm75_N20",
+        "PIDF_w30_pm75_N10"
+      ],
+      "denominator": 43
+    },
+    {
+      "scenario": "Recovery_s=10",
+      "thresholds": {
+        "Recovery_s": 10.0,
+        "MaxAbs_Hz": 0.025,
+        "PeakCommand_pu": 0.02,
+        "PM_deg": 45,
+        "GM_dB": 6
+      },
+      "selected": "PIDF_w24_pm75_N10",
+      "selected_pass_count": 42,
+      "candidate_A_pass_count": 42,
+      "original_PI_pass_count": 34,
+      "original_PIDF_pass_count": 36,
+      "maximum_count_ties": [
+        "PIDF_w24_pm75_N10",
+        "PIDF_w30_pm75_N5",
+        "PIDF_w24_pm75_N20",
+        "PIDF_w30_pm75_N10"
+      ],
+      "denominator": 43
+    },
+    {
+      "scenario": "MaxAbs_Hz=0.02",
+      "thresholds": {
+        "Recovery_s": 8,
+        "MaxAbs_Hz": 0.02,
+        "PeakCommand_pu": 0.02,
+        "PM_deg": 45,
+        "GM_dB": 6
+      },
+      "selected": "PIDF_w30_pm75_N10",
+      "selected_pass_count": 42,
+      "candidate_A_pass_count": 35,
+      "original_PI_pass_count": 13,
+      "original_PIDF_pass_count": 22,
+      "maximum_count_ties": [
+        "PIDF_w30_pm75_N10"
+      ],
+      "denominator": 43
+    },
+    {
+      "scenario": "MaxAbs_Hz=0.03",
+      "thresholds": {
+        "Recovery_s": 8,
+        "MaxAbs_Hz": 0.03,
+        "PeakCommand_pu": 0.02,
+        "PM_deg": 45,
+        "GM_dB": 6
+      },
+      "selected": "PIDF_w24_pm75_N10",
+      "selected_pass_count": 42,
+      "candidate_A_pass_count": 42,
+      "original_PI_pass_count": 35,
+      "original_PIDF_pass_count": 36,
+      "maximum_count_ties": [
+        "PIDF_w24_pm75_N10",
+        "PIDF_w30_pm75_N5",
+        "PIDF_w24_pm75_N20",
+        "PIDF_w30_pm75_N10"
+      ],
+      "denominator": 43
+    },
+    {
+      "scenario": "PM_deg=40",
+      "thresholds": {
+        "Recovery_s": 8,
+        "MaxAbs_Hz": 0.025,
+        "PeakCommand_pu": 0.02,
+        "PM_deg": 40.0,
+        "GM_dB": 6
+      },
+      "selected": "PIDF_w24_pm75_N10",
+      "selected_pass_count": 43,
+      "candidate_A_pass_count": 43,
+      "original_PI_pass_count": 35,
+      "original_PIDF_pass_count": 37,
+      "maximum_count_ties": [
+        "PIDF_w24_pm75_N10",
+        "PIDF_w30_pm75_N5",
+        "PIDF_w24_pm75_N20",
+        "PIDF_w30_pm75_N10"
+      ],
+      "denominator": 43
+    },
+    {
+      "scenario": "PM_deg=50",
+      "thresholds": {
+        "Recovery_s": 8,
+        "MaxAbs_Hz": 0.025,
+        "PeakCommand_pu": 0.02,
+        "PM_deg": 50.0,
+        "GM_dB": 6
+      },
+      "selected": "PIDF_w30_pm75_N10",
+      "selected_pass_count": 41,
+      "candidate_A_pass_count": 37,
+      "original_PI_pass_count": 31,
+      "original_PIDF_pass_count": 34,
+      "maximum_count_ties": [
+        "PIDF_w30_pm75_N10",
+        "PIDF_w30_pm75_N20"
+      ],
+      "denominator": 43
+    },
+    {
+      "scenario": "GM_dB=3",
+      "thresholds": {
+        "Recovery_s": 8,
+        "MaxAbs_Hz": 0.025,
+        "PeakCommand_pu": 0.02,
+        "PM_deg": 45,
+        "GM_dB": 3.0
+      },
+      "selected": "PIDF_w24_pm75_N10",
+      "selected_pass_count": 42,
+      "candidate_A_pass_count": 42,
+      "original_PI_pass_count": 34,
+      "original_PIDF_pass_count": 36,
+      "maximum_count_ties": [
+        "PIDF_w24_pm75_N10",
+        "PIDF_w30_pm75_N5",
+        "PIDF_w24_pm75_N20",
+        "PIDF_w30_pm75_N10"
+      ],
+      "denominator": 43
+    },
+    {
+      "scenario": "GM_dB=9",
+      "thresholds": {
+        "Recovery_s": 8,
+        "MaxAbs_Hz": 0.025,
+        "PeakCommand_pu": 0.02,
+        "PM_deg": 45,
+        "GM_dB": 9.0
+      },
+      "selected": "PIDF_w24_pm75_N10",
+      "selected_pass_count": 42,
+      "candidate_A_pass_count": 42,
+      "original_PI_pass_count": 32,
+      "original_PIDF_pass_count": 36,
+      "maximum_count_ties": [
+        "PIDF_w24_pm75_N10",
+        "PIDF_w30_pm75_N5",
+        "PIDF_w24_pm75_N20",
+        "PIDF_w30_pm75_N10"
+      ],
+      "denominator": 43
+    },
+    {
+      "scenario": "PeakCommand_pu=0.015",
+      "thresholds": {
+        "Recovery_s": 8,
+        "MaxAbs_Hz": 0.025,
+        "PeakCommand_pu": 0.015,
+        "PM_deg": 45,
+        "GM_dB": 6
+      },
+      "selected": "PIDF_w24_pm75_N10",
+      "selected_pass_count": 42,
+      "candidate_A_pass_count": 42,
+      "original_PI_pass_count": 34,
+      "original_PIDF_pass_count": 36,
+      "maximum_count_ties": [
+        "PIDF_w24_pm75_N10",
+        "PIDF_w24_pm75_N20"
+      ],
+      "denominator": 43
+    },
+    {
+      "scenario": "PeakCommand_pu=0.025",
+      "thresholds": {
+        "Recovery_s": 8,
+        "MaxAbs_Hz": 0.025,
+        "PeakCommand_pu": 0.025,
+        "PM_deg": 45,
+        "GM_dB": 6
+      },
+      "selected": "PIDF_w24_pm75_N10",
+      "selected_pass_count": 42,
+      "candidate_A_pass_count": 42,
+      "original_PI_pass_count": 34,
+      "original_PIDF_pass_count": 36,
+      "maximum_count_ties": [
+        "PIDF_w24_pm75_N10",
+        "PIDF_w30_pm75_N5",
+        "PIDF_w24_pm75_N20",
+        "PIDF_w30_pm75_N10"
+      ],
+      "denominator": 43
+    }
+  ],
+  "same_A_choice_in_10_changes": 8,
+  "candidate_noise_increase_percent_vs_original_PIDF": 70.85463468116689,
+  "candidate_case31_PM_shortfall_deg": 0.8417323222394018
+}

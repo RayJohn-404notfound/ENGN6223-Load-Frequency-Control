@@ -1,0 +1,21 @@
+# Local/editor files
+.DS_Store
+.build/
+__pycache__/
+*.pyc
+.venv/
+*.asv
+# Generated figures, models and large intermediates
+*.fig
+*.png
+*.pdf
+*.mat
+*.slxc
+slprj/
+model/*.slx
+# Execution logs and generated prose summaries
+*.log
+results/**/*.txt
+results/*.txt
+# Keep CSV/JSON reference snapshots and the design protocol visible.
+results/report_compact/*.json

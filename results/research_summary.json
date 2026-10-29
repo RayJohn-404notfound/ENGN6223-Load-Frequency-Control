@@ -1,0 +1,429 @@
+{
+  "p": {
+    "Tg": 0.08,
+    "Tt": 0.3,
+    "Tp": 20,
+    "Ksys": 120,
+    "R": 2.4,
+    "loadStep": 0.01,
+    "stepTime": 1,
+    "tEnd": 30,
+    "dt": 0.001
+  },
+  "specifications": {
+    "recoveryBandHz": 0.001,
+    "recoveryTime_s": 8,
+    "maxAbsoluteDeviationHz": 0.025,
+    "maxSecondaryCommandPu": 0.02,
+    "minPhaseMarginDeg": 45,
+    "minGainMarginDb": 6
+  },
+  "design": {
+    "wc": 2.4,
+    "phaseMarginTarget": 65,
+    "Cstar_real": 0.29434109548489451,
+    "Cstar_imag": -0.20240576629323509
+  },
+  "controllers": [
+    {
+      "name": "PI",
+      "Kp": 0.29434109548489451,
+      "Ki": 0.4857738391037642,
+      "Kd": 0,
+      "Tf": 0
+    },
+    {
+      "name": "PIDF",
+      "Kp": 0.28598333828565276,
+      "Ki": 0.68636001188556661,
+      "Kd": 0.035172228213475765,
+      "Tf": 0.041666666666666664
+    }
+  ],
+  "rankControllability": 3,
+  "rankObservability": 3,
+  "plantDenominator": [
+    0.48,
+    7.6240000000000006,
+    20.38,
+    51
+  ],
+  "plantPoles": [
+    [
+      -13.290159274934002,
+      0
+    ],
+    [
+      -1.296587029199664,
+      2.5126677347573123
+    ],
+    [
+      -1.296587029199664,
+      -2.5126677347573123
+    ]
+  ],
+  "PI_RouthFirstColumn": [
+    0.48,
+    7.6240000000000006,
+    14.945313864122515,
+    56.584201004762015,
+    58.292860692451704
+  ],
+  "nominal": [
+    {
+      "nadirHz": -0.030697021455442241,
+      "positivePeakHz": 0,
+      "maxAbsHz": 0.030697021455442241,
+      "nadirAfterStep_s": 0.891,
+      "recovery_s": null,
+      "IAE_Hz_s": 0.68189157516145638,
+      "uPeakPu": 0,
+      "uEnergy_pu2_s": 0,
+      "finalFrequencyHz": -0.023529411764705063,
+      "name": "Droop",
+      "maxRealPole": -1.296587029199664,
+      "poles": [
+        [
+          -13.290159274934002,
+          0
+        ],
+        [
+          -1.296587029199664,
+          2.5126677347573123
+        ],
+        [
+          -1.296587029199664,
+          -2.5126677347573123
+        ]
+      ],
+      "steadyFrequencyHz": -0.023529411764705889,
+      "steadySecondaryPu": 0,
+      "PM_deg": null,
+      "GM_dB": null,
+      "wcg_rad_s": null,
+      "wcp_rad_s": null,
+      "Ms": null,
+      "Mt": null,
+      "noiseCommandGain100": null,
+      "allMargins": {},
+      "nyquist": {},
+      "nominalTargetsPass": false
+    },
+    {
+      "nadirHz": -0.02170196466513645,
+      "positivePeakHz": 0.0031936344390670226,
+      "maxAbsHz": 0.02170196466513645,
+      "nadirAfterStep_s": 0.562,
+      "recovery_s": 4.655,
+      "IAE_Hz_s": 0.024307851741564766,
+      "uPeakPu": 0.011359599831638595,
+      "uEnergy_pu2_s": 0.002824408604817817,
+      "finalFrequencyHz": -2.2568487040259622E-11,
+      "name": "PI",
+      "maxRealPole": -0.70495738065195535,
+      "poles": [
+        [
+          -13.694582166104784,
+          0
+        ],
+        [
+          -0.70495738065195535,
+          3.2998852675016703
+        ],
+        [
+          -0.70495738065195535,
+          -3.2998852675016703
+        ],
+        [
+          -0.77883640592463388,
+          0
+        ]
+      ],
+      "steadyFrequencyHz": 0,
+      "steadySecondaryPu": 0.01,
+      "PM_deg": 65.001045129101939,
+      "GM_dB": 11.276493680745807,
+      "wcg_rad_s": 4.8640899436549763,
+      "wcp_rad_s": 2.3999737174187437,
+      "Ms": 1.8993596375700692,
+      "Mt": 1.2289034435676149,
+      "noiseCommandGain100": 0.29438420920688319,
+      "allMargins": {
+        "GainMargin": 3.6628968100902664,
+        "GMFrequency": 4.8640899436549763,
+        "PhaseMargin": 65.001045129101939,
+        "PMFrequency": 2.3999737174187437,
+        "DelayMargin": 0.47270611611548269,
+        "DMFrequency": 2.3999737174187437,
+        "Stable": true
+      },
+      "nyquist": {
+        "openRHPPoles": 0,
+        "originPoleExcluded": true,
+        "windingCCW": 0,
+        "windingRefinedCCW": 0,
+        "closedUnstablePoles": 0
+      },
+      "nominalTargetsPass": true
+    },
+    {
+      "nadirHz": -0.019699934712958441,
+      "positivePeakHz": 0.0040120283129202973,
+      "maxAbsHz": 0.019699934712958441,
+      "nadirAfterStep_s": 0.528,
+      "recovery_s": 2.991,
+      "IAE_Hz_s": 0.019878868608105515,
+      "uPeakPu": 0.011335737716107947,
+      "uEnergy_pu2_s": 0.0028645222246489674,
+      "finalFrequencyHz": 8.2078102452663726E-14,
+      "name": "PIDF",
+      "maxRealPole": -0.891158046362019,
+      "poles": [
+        [
+          -24.81992590526928,
+          0
+        ],
+        [
+          -12.016558967488402,
+          0
+        ],
+        [
+          -0.891158046362019,
+          3.1819936900949619
+        ],
+        [
+          -0.891158046362019,
+          -3.1819936900949619
+        ],
+        [
+          -1.2645323678515998,
+          0
+        ]
+      ],
+      "steadyFrequencyHz": 0,
+      "steadySecondaryPu": 0.01,
+      "PM_deg": 65.000036017584208,
+      "GM_dB": 26.568524512960391,
+      "wcg_rad_s": 12.878450761888152,
+      "wcp_rad_s": 2.3999988004069941,
+      "Ms": 1.5739682184150157,
+      "Mt": 1.0264045322020889,
+      "noiseCommandGain100": 1.0998588485519618,
+      "allMargins": {
+        "GainMargin": 21.302286711906117,
+        "GMFrequency": 12.878450761888152,
+        "PhaseMargin": 65.000036017584208,
+        "PMFrequency": 2.3999988004069941,
+        "DelayMargin": 0.47269383727582015,
+        "DMFrequency": 2.3999988004069941,
+        "Stable": true
+      },
+      "nyquist": {
+        "openRHPPoles": 0,
+        "originPoleExcluded": true,
+        "windingCCW": 0,
+        "windingRefinedCCW": 0,
+        "closedUnstablePoles": 0
+      },
+      "nominalTargetsPass": true
+    }
+  ],
+  "robustSummary": [
+    {
+      "name": "PI",
+      "testedCases": 43,
+      "stableCases": 43,
+      "worstNadirHz": -0.03064770293813884,
+      "worstRecovery_s": 13.788,
+      "maxCommandPu": 0.015060252169945026,
+      "minPM_deg": 20.299240330907917,
+      "minGM_dB": 3.9813522067885558,
+      "nominalTimeTargetCases": 41,
+      "allNominalTargetsCases": 34
+    },
+    {
+      "name": "PIDF",
+      "testedCases": 43,
+      "stableCases": 43,
+      "worstNadirHz": -0.027457060270383426,
+      "worstRecovery_s": 6.706,
+      "maxCommandPu": 0.014480698997074425,
+      "minPM_deg": 32.180885254781558,
+      "minGM_dB": 20.088859321792146,
+      "nominalTimeTargetCases": 43,
+      "allNominalTargetsCases": 36
+    }
+  ],
+  "saturationSettings": {
+    "loadPu": 0.03,
+    "on_s": 5,
+    "off_s": 20,
+    "end_s": 50,
+    "limitPu": 0.015,
+    "Taw_s": 0.5,
+    "dt": 0.005
+  },
+  "saturationMetrics": [
+    {
+      "Controller": "PI",
+      "AntiWindup": false,
+      "RecoveryAfterRemoval_s": 18.86,
+      "PositivePeak_Hz": 0.056796924662706312,
+      "MaxAbsoluteDeviation_Hz": 0.06856460736525509,
+      "MaxCommand_pu": 0.015
+    },
+    {
+      "Controller": "PI",
+      "AntiWindup": true,
+      "RecoveryAfterRemoval_s": 5.535,
+      "PositivePeak_Hz": 0.042948927486084323,
+      "MaxAbsoluteDeviation_Hz": 0.06856460736525509,
+      "MaxCommand_pu": 0.015
+    },
+    {
+      "Controller": "PIDF",
+      "AntiWindup": false,
+      "RecoveryAfterRemoval_s": 17.485,
+      "PositivePeak_Hz": 0.056796924673047464,
+      "MaxAbsoluteDeviation_Hz": 0.064960981522607847,
+      "MaxCommand_pu": 0.015
+    },
+    {
+      "Controller": "PIDF",
+      "AntiWindup": true,
+      "RecoveryAfterRemoval_s": 4.754999999999999,
+      "PositivePeak_Hz": 0.042538365396149053,
+      "MaxAbsoluteDeviation_Hz": 0.064960981522607847,
+      "MaxCommand_pu": 0.015
+    }
+  ],
+  "courseExtension": {
+    "rankControllability": 3,
+    "rankObservability": 3,
+    "rankIntegralControllability": 4,
+    "stateFeedbackK": [
+      -0.11066666666666621,
+      0.665326666666667,
+      0.03837783333333377,
+      -0.28800000000000037
+    ],
+    "assignedPoles": [
+      -1.5,
+      -2,
+      -3,
+      -8
+    ],
+    "LQR_K": [
+      0.66407311527891977,
+      1.4421362493639156,
+      0.8446193182286853,
+      -0.79999999999999616
+    ],
+    "LQR_Q": [
+      [
+        2500,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2500,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1599.9999999999998,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1599.9999999999998
+      ]
+    ],
+    "LQR_R": 2500,
+    "LQR_poles": [
+      [
+        -0.89457127045003093,
+        0
+      ],
+      [
+        -2.726503944015445,
+        2.2584312735670644
+      ],
+      [
+        -2.726503944015445,
+        -2.2584312735670644
+      ],
+      [
+        -17.836668115838918,
+        0
+      ]
+    ],
+    "observerGain": [
+      -11.46458333333339,
+      3.2824074074074128,
+      6.1166666666666165
+    ],
+    "observerPoles": [
+      -6,
+      -7,
+      -9
+    ],
+    "observerFinalErrorNorm": 1.4819783026095356E-14,
+    "observerDisturbanceKnownZero": true,
+    "separationPoles": [
+      [
+        -8.0000000000000142,
+        0
+      ],
+      [
+        -2.9999999999999867,
+        0
+      ],
+      [
+        -2.0000000000000306,
+        0
+      ],
+      [
+        -1.4999999999999845,
+        0
+      ],
+      [
+        -8.9999999999999858,
+        0
+      ],
+      [
+        -7.0000000000000018,
+        0
+      ],
+      [
+        -5.999999999999968,
+        0
+      ]
+    ]
+  },
+  "validation": {
+    "Droop_odeLsimMaxStateError": 1.971135900986562E-12,
+    "PI_transferStateMaxError": 8.9555099447302666E-16,
+    "PI_odeLsimMaxStateError": 1.9752189013360569E-12,
+    "PIDF_transferStateMaxError": 3.5891428717960139E-15,
+    "PIDF_odeLsimMaxStateError": 2.0511227222911352E-12,
+    "Simulink": "PASS",
+    "Droop_SimulinkMaxError": 3.5261724096180558E-14,
+    "PI_SimulinkMaxError": 5.5917943886374388E-14,
+    "PIDF_SimulinkMaxError": 6.9040220589122736E-12,
+    "analyticalTransferFunction": "PASS",
+    "ODE_LSIM": "PASS",
+    "controllabilityObservability": "PASS",
+    "PI_Routh": "PASS",
+    "modifiedNyquist": "PASS",
+    "saturationBound": "PASS",
+    "observerDemonstration": "PASS",
+    "matlabVersion": "26.1.0.3276743 (R2026a) Update 3"
+  }
+}

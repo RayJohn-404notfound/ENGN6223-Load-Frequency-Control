@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this submission release when referring to the code."
+title: "Single-Area Load Frequency Control: Matched-Margin PI/PIDF and Recovery Trade-offs"
+type: software
+authors:
+  - family-names: Jiang
+    given-names: Rui
+  - family-names: Jin
+    given-names: Zhihao
+  - family-names: Deng
+    given-names: Yingtian
+  - family-names: Wu
+    given-names: Shiyuan
+version: 1.0-submission
+date-released: 2026-10-30
+repository-code: "https://github.com/RayJohn-404notfound/ENGN6223-Load-Frequency-Control"
